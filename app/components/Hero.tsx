@@ -68,7 +68,7 @@ export default function Hero() {
               </a>
 
               <Link
-                href="/EkonkarSinghResume_2025.pdf"
+                href="/resume.pdf"
                 className="inline-flex items-center rounded-lg border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-200 hover:bg-slate-800"
                 aria-label="Download CV"
               >

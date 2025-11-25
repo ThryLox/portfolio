@@ -7,7 +7,7 @@ const experiences = [
         company: "Shared Services Canada",
         period: "2023 - Present",
         description: [
-            "Helped develop automated compliance reporting tools for federal cloud environments.",
+            "Assisted in the development of automated compliance reporting tools for federal cloud environments.",
             "Managed identity and access controls for over 5000+ users across hybrid infrastructure.",
             "Collaborated with cross-functional teams to remediate security vulnerabilities in real-time."
         ],

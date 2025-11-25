@@ -3,9 +3,9 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
     {
-        role: "IT Analyst (Security and Compliance)",
+        role: "Support Analyst (Security and Compliance)",
         company: "Shared Services Canada",
-        period: "2022 - Present",
+        period: "2023 - Present",
         description: [
             "Helped develop automated compliance reporting tools for federal cloud environments.",
             "Managed identity and access controls for over 5000+ users across hybrid infrastructure.",
@@ -15,7 +15,7 @@ const experiences = [
     {
         role: "Network Specialist",
         company: "Alstom, Thunder Bay",
-        period: "2020 - 2022",
+        period: "2022 - 2022",
         description: [
             "Designed and maintained secure network architectures for industrial control systems.",
             "Implemented network segmentation and firewall policies to protect critical assets.",
@@ -25,7 +25,7 @@ const experiences = [
     {
         role: "Information Systems Administrator",
         company: "McDonald’s",
-        period: "2018 - 2020",
+        period: "2021 - 2022",
         description: [
             "Managed POS systems and back-office infrastructure for high-volume retail locations.",
             "Ensured PCI-DSS compliance and implemented security best practices.",

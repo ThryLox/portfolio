@@ -16,7 +16,7 @@ export default async function Home() {
   return (
     <div className="space-y-20 pb-20">
       <WhoAmI data={whoAmI} />
-      <SystemConfig config={config} />
+      <SystemConfig config={config as any} />
       <LogViewer logs={logs} />
       <DeploymentGrid deployments={deployments} />
       <CronJobManager jobs={cronjobs} />

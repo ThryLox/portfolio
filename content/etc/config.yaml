@@ -1,0 +1,12 @@
+---
+skills:
+  - category: "Security"
+    items: ["Penetration Testing", "Cloud Security", "IAM", "Compliance (SOC2/ISO)"]
+  - category: "Development"
+    items: ["TypeScript", "Next.js", "Python", "Go", "Rust"]
+  - category: "Infrastructure"
+    items: ["Kubernetes", "Terraform", "AWS/Azure", "Linux Administration"]
+  - category: "Tools"
+    items: ["Burp Suite", "Metasploit", "Wireshark", "Git"]
+
+---

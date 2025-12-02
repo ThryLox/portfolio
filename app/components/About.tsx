@@ -1,7 +1,7 @@
 // About section for my portfolio.
 // Context: I have experience as an IT Analyst (Security & Compliance) at Shared Services Canada,
 // a Network Specialist at Alstom, and an Information Systems Administrator at McDonald's.
-// Requirements for Copilot:
+
 // - Section title: "About".
 // - Short paragraph telling my story: security & compliance focus, cloud and identity, automation.
 // - Below the paragraph, create a responsive grid of skill categories:

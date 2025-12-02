@@ -1,26 +1,26 @@
-import { Navbar } from "@/app/components/layout/Navbar";
-import { Footer } from "@/app/components/layout/Footer";
-import { Hero } from "@/app/components/sections/Hero";
-import { About } from "@/app/components/sections/About";
-import { Projects } from "@/app/components/sections/Projects";
-import { Experience } from "@/app/components/sections/Experience";
-import { Contact } from "@/app/components/sections/Contact";
+import { getPostBySlug, getAllPosts, getConfig } from "@/lib/content";
+import { WhoAmI } from "@/app/components/sections/WhoAmI";
+import { LogViewer } from "@/app/components/sections/LogViewer";
+import { DeploymentGrid } from "@/app/components/sections/DeploymentGrid";
+import { CronJobManager } from "@/app/components/sections/CronJobManager";
+import { NetworkInterface } from "@/app/components/sections/NetworkInterface";
+import { SystemConfig } from "@/app/components/sections/SystemConfig";
 
-import { Particles } from "@/app/components/ui/Particles";
+export default async function Home() {
+  const whoAmI = await getPostBySlug("whoami", "root");
+  const logs = getAllPosts("logs");
+  const deployments = getAllPosts("deployments");
+  const cronjobs = getAllPosts("cronjobs");
+  const config = getConfig();
 
-export default function Home() {
   return (
-    <>
-      <Particles />
-      <Navbar />
-      <main className="flex flex-col gap-12 sm:gap-24">
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <div className="space-y-20 pb-20">
+      <WhoAmI data={whoAmI} />
+      <SystemConfig config={config} />
+      <LogViewer logs={logs} />
+      <DeploymentGrid deployments={deployments} />
+      <CronJobManager jobs={cronjobs} />
+      <NetworkInterface />
+    </div>
   );
 }

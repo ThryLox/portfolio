@@ -7,7 +7,7 @@ export const NetworkInterface = () => {
     const [pingResult, setPingResult] = useState<string[]>([]);
     const [isPinging, setIsPinging] = useState(false);
     const [copied, setCopied] = useState(false);
-    const email = "ekonkar.saini.s@gmail.com";
+    const email = "ekonkar.singh.s@gmail.com";
 
     const handlePing = () => {
         if (isPinging) return;

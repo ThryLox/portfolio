@@ -19,7 +19,7 @@ export const NetworkInterface = () => {
             "64 bytes from 127.0.0.1: icmp_seq=0 ttl=64 time=0.045 ms",
             "64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.052 ms",
             "64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.048 ms",
-            "--- ekonkar.saini.s@gmail.com ping statistics ---",
+            "--- ekonkar.singh.s@gmail.com ping statistics ---",
             "3 packets transmitted, 3 packets received, 0.0% packet loss",
             "round-trip min/avg/max/stddev = 0.045/0.048/0.052/0.003 ms"
         ];
@@ -44,7 +44,7 @@ export const NetworkInterface = () => {
         <section id="contact" className="py-12 font-mono">
             <div className="flex items-center gap-2 mb-6 text-primary">
                 <span className="text-accent">$</span>
-                <h2 className="text-xl font-bold">ping ekonkar.saini.s@gmail.com</h2>
+                <h2 className="text-xl font-bold">ping ekonkar.singh.s@gmail.com</h2>
             </div>
 
             <div className="bg-card/50 border border-border rounded-lg p-6">

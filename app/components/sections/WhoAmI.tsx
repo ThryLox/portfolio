@@ -52,21 +52,15 @@ export const WhoAmI = ({ data }: WhoAmIProps) => {
                         </span>
                     </div>
                     <div className="flex gap-4">
-                        <span className="text-primary min-w-[100px]">uptime:</span>
-                        <span className="text-foreground">
-                            <TypewriterText text={data.uptime} delay={3400} cursor={false} />
-                        </span>
-                    </div>
-                    <div className="flex gap-4">
                         <span className="text-primary min-w-[100px]">shell:</span>
                         <span className="text-foreground">
-                            <TypewriterText text={data.shell} delay={3700} cursor={false} />
+                            <TypewriterText text={data.shell} delay={3400} cursor={false} />
                         </span>
                     </div>
                     <div className="flex gap-4">
                         <span className="text-primary min-w-[100px]">location:</span>
                         <span className="text-foreground">
-                            <TypewriterText text={data.location} delay={4000} cursor={false} />
+                            <TypewriterText text={data.location} delay={3700} cursor={false} />
                         </span>
                     </div>
                 </div>

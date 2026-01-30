@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "EkonkarOS",
   description: "System Architect & Security Specialist Portfolio",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.png?v=1",
   },
 };
 

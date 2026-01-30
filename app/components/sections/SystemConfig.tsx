@@ -30,7 +30,7 @@ export const SystemConfig = ({ config }: { config: ConfigData }) => {
     };
 
     return (
-        <section id="config" className="py-12 font-mono">
+        <section id="skills" className="py-12 font-mono">
             <div className="flex items-center gap-2 mb-6 text-primary">
                 <span className="text-accent">$</span>
                 <h2 className="text-xl font-bold">cat /etc/config.yaml</h2>

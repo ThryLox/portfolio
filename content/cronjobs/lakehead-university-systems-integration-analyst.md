@@ -1,20 +1,41 @@
 ---
 title: "Systems Integration Analyst (Contract)"
-company: "Lakehead University — Conference Services"
+company: "Lakehead University – Conference Services"
 location: "Thunder Bay, Ontario"
 startDate: "2025-08-01"
-endDate: "2026-01-31"
+endDate: "2026-03-31"
 schedule: "0 8 * * 1-5"
-status: "running"
-tags: ["Systems Integration", "Automation", "Networking", "AV Systems", "Technical Architecture"]
+status: "completed"
+tags: ["Systems Implementation", "Data Migration", "Python", "Bash", "Project Lead"]
 ---
 
-## Process Output
-- Leading **system integration initiatives** across Lakehead University’s Conference Services infrastructure.
-- Designing and deploying **network automation pipelines** and **multi-venue synchronization systems** for audio-visual management.
-- Developing **lightweight service orchestration scripts** to unify booking, device control, and monitoring frameworks.
-- Coordinating technical documentation and **post-event analytics** to enhance service uptime and reliability.
-- Integrating hardware telemetry streams into a unified **event-ops dashboard** for proactive troubleshooting.
+## Role Overview
 
-### Loaded Modules
-`Systems Integration` `Automation` `Networking` `Python/Bash Scripting` `AV Infrastructure`
+Led the migration of Conference Services' PSM system to Tripleseat, including vendor evaluation, data architecture, and technical implementation.
+
+---
+
+## Tripleseat Migration (Project Lead)
+
+- Identified Tripleseat as STS replacement and initiated vendor outreach
+- Coordinated meetings between leadership and Tripleseat team
+- Led contract and onboarding process
+- Collected technical data for all event spaces (photos, dimensions, configurations)
+- Coordinated with Physical Plant for infrastructure details
+- Exported legacy data from STS and prepared for migration
+- Cleaned, structured, and validated data to meet import templates
+- Served as primary SME for platform implementation
+
+---
+
+## Technical Automation
+
+- Built automation pipelines correlating device telemetry with identity context
+- Developed Python and Bash scripts for system monitoring and event integration
+- Improved system visibility by linking identity signals with system-state data
+
+---
+
+## Tech Stack
+
+`Tripleseat` `Data Migration` `Python` `Bash` `System Integration`

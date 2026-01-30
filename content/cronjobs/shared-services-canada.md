@@ -1,19 +1,33 @@
 ---
-title: "Support Analyst — Solution Design Team (ITBLAS)"
-company: "Shared Services Canada"
+title: "Support Analyst — Security & Compliance"
+company: "Shared Services Canada – Solution Design Team (ITBLAS)"
 location: "Thunder Bay, Ontario"
-startDate: "2025-07-31"
+startDate: "2025-07-01"
 endDate: "Present"
 schedule: "0 9 * * 1-5"
 status: "running"
-tags: ["System Design", "Compliance Automation", "PowerShell", "Azure", "Incident Response"]
+tags: ["Azure", "Microsoft 365", "PowerShell", "Compliance", "Identity"]
 ---
 
-## Process Output
-- Supporting the **Solution Design Team (ITBLAS)** in developing and optimizing government-grade IT compliance and infrastructure solutions.
-- Automating system provisioning and compliance checks using **PowerShell** and **Azure-native tools**.
-- Coordinating cross-departmental system integration projects aligned with **Treasury Board of Canada Secretariat** directives.
-- Performing internal audits and **incident response optimization**, enhancing reliability across production environments.
+## Role Overview
 
-### Loaded Modules
-`Infrastructure` `PowerShell Automation` `Compliance` `Azure` `Service Management`
+Supporting architectural improvements to a multi-tenant Azure identity compliance platform for federal government.
+
+---
+
+## Key Contributions
+
+- Advised on platform improvements achieving **~70% reduction in script execution time** and **~35% reduction in cloud costs**
+- Implemented PowerShell automation for identity mapping, tenant validation, and compliance reporting
+- Supported scalability planning from 20 tenants toward **200-tenant footprint**
+- Assisted SQL workload migration out of VMs for improved reliability
+- Provided SME input on cross-tenant migrations using Quest On Demand and ShareGate
+- Coordinated with Microsoft for temporary licensing for tool evaluation
+- Advised on Jira workflows and Confluence documentation practices
+- Contributed to Azure tenant security guidance aligned with TBS guardrails and ITSG-33
+
+---
+
+## Tech Stack
+
+`PowerShell` `Azure` `M365` `Jira` `Confluence` `Quest On Demand` `ShareGate`

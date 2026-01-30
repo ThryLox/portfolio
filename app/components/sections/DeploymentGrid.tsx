@@ -22,7 +22,7 @@ export const DeploymentGrid = ({ deployments }: DeploymentGridProps) => {
                         href={`/deployments/${deployment.slug}`}
                         key={deployment.slug}
                         command={`systemctl start ${deployment.slug}.service`}
-                        className="group relative bg-card/50 border border-border p-5 rounded-lg hover:border-primary/50 transition-all hover:bg-white/5 block h-full"
+                        className="group relative bg-card/50 border border-border p-5 rounded-lg hover:border-primary/50 transition-all hover:bg-white/5 block h-full card-hover glow-on-hover"
                     >
                         <div className="flex justify-between items-start mb-4">
                             <div className="flex items-center gap-2">

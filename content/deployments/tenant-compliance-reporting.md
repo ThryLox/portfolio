@@ -1,34 +1,36 @@
 ---
-title: "Tenant Compliance Reporting Service"
+title: "GCComply — Multi-Tenant Identity Compliance"
 date: "2024-07-10"
 status: "active"
 version: "v1.0.0"
-description: "Automated tenant compliance audit pipeline aligned with Treasury Board of Canada directives."
-tags: ["PowerShell", "Power BI", "OPA", "Compliance Automation"]
+description: "Production compliance platform mapping ITSG-33, NIST, and Zero Trust controls to technical evidence."
+tags: ["PowerShell", "Power BI", "OPA", "Azure", "Compliance"]
 link: ""
 demo: ""
 ---
 
-# System Overview
-Automated **tenant-level compliance reporting** framework built for the **Treasury Board Secretariat of Canada**.
-Evaluates alignment with IT Security Directive ITSB-33 and related federal policies.
+# Overview
+
+**GCComply** is a production tenant compliance reporting solution for federal M365 environments. Maps ITSG-33, NIST, and Zero Trust controls to technical evidence for audit readiness.
 
 ---
 
-## Core Features
-- **PowerShell automation** for M365 tenant data collection
-- **OPA-based policy engine** to validate directives and controls
-- **Power BI dashboards** for visual compliance scoring and deviations
-- Supports **multi-tenant execution** with role-based access control
+## Features
+
+- Automated identity posture assessment across multiple tenants
+- PowerShell automation for M365 tenant data collection
+- OPA policy engine for directive validation
+- Power BI dashboards for compliance scoring
+- Multi-tenant execution with role-based access
 
 ---
 
-## Runtime Stack
-- `PowerShell` `OPA` `Power BI` `JSON policy definitions`
-- Modular audit scripts and rule templates
-- Data pipelines optimized for reproducibility and real-time analytics
+## Scale
+
+Currently supporting **20+ tenants** with architecture designed for **200-tenant footprint**.
 
 ---
 
-## Capabilities
-`Compliance Automation` `PowerShell` `Policy-as-Code` `Data Visualization`
+## Tech Stack
+
+`PowerShell` `OPA` `Power BI` `Azure` `M365`

@@ -33,9 +33,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# artifacts
-walkthrough.md
-implementation_plan.md
-task.md
-instructions.md

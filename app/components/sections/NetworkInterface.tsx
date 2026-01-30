@@ -75,7 +75,7 @@ export const NetworkInterface = () => {
 
                         <div className="flex gap-4 text-sm pt-4 border-t border-border">
                             <a href="https://github.com/ThryLox" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                                githubd
+                                github_daemon
                             </a>
                             <span className="text-border">|</span>
                             <a href="https://www.linkedin.com/in/esingh-1/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">

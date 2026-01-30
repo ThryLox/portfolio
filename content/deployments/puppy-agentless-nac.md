@@ -3,26 +3,27 @@ title: "PUPPY — Agentless NAC"
 date: "2025-01-01"
 status: "active"
 version: "v1.0.0"
-description: "Agentless Network Access Control system for securing BYOD environments."
-tags: ["Network Security", "Automation", "RADIUS", "Slack API"]
+description: "Network Access Control without endpoint agents for BYOD environments."
+tags: ["Network Security", "RADIUS", "Python", "Slack API"]
 link: ""
 demo: ""
 ---
 
-# System Overview
+# Overview
 
-**PUPPY (Agentless NAC)** is a security solution engineered to enforce **Network Access Control (NAC)** without endpoint agents.
+**PUPPY** enforces Network Access Control without requiring agents on endpoints. Designed for BYOD environments where you can't install software on every device.
 
-## Core Features
-- Enforces **RADIUS-based authentication** for device validation.
-- Continuously monitors network endpoints and compliance posture.
-- Integrates **Slack alerts** for real-time device activity and policy notifications.
-- Supports scalability and modular rule definitions for diverse environments.
+---
 
-## Runtime Stack
-- Automated scripting for network discovery and compliance enforcement.
-- Localized security checks with lightweight network orchestration.
-- Planned extension for anomaly detection and visualization dashboards.
+## Features
 
-## Capabilities
-`Network Security` `Scripting and Automation` `RADIUS` `Python` `System Design`
+- RADIUS-based authentication for device validation
+- Continuous network endpoint monitoring
+- Real-time Slack alerts for device activity
+- Modular rule definitions for diverse environments
+
+---
+
+## Tech Stack
+
+`Python` `RADIUS` `Slack API` `Network Security`

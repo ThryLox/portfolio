@@ -1,12 +1,16 @@
 ---
 skills:
-  - category: "Security"
-    items: ["Penetration Testing", "Cloud Security", "IAM", "Compliance (SOC2/ISO)"]
-  - category: "Development"
-    items: ["TypeScript", "Next.js", "Python", "Go", "Rust"]
-  - category: "Infrastructure"
-    items: ["Kubernetes", "Terraform", "AWS/Azure", "Linux Administration"]
-  - category: "Tools"
-    items: ["Burp Suite", "Metasploit", "Wireshark", "Git"]
+  - category: "Identity & Access"
+    items: ["Microsoft Entra ID", "Conditional Access", "MFA", "Identity Governance", "Cross-Tenant Migrations"]
+  - category: "Security & Compliance"
+    items: ["ITSG-33", "NIST 800-53", "Zero Trust", "CIS Benchmarks", "TBS Guardrails"]
+  - category: "Automation"
+    items: ["PowerShell", "Python", "Bash", "Go", "Policy-as-Code", "OPA"]
+  - category: "Cloud & Platforms"
+    items: ["Microsoft Azure", "M365", "Windows", "Linux", "SQL", "PostgreSQL"]
+  - category: "Enterprise Tools"
+    items: ["Jira", "Confluence", "Quest On Demand", "ShareGate", "Power BI", "Log Analytics"]
+  - category: "ML & Research"
+    items: ["Scikit-Learn", "PyTorch", "Self-Supervised Learning", "Drift Detection"]
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: "System Identity"
-date: "2025-12-01"
-role: "Enterprise Cloud Identity & Compliance Engineer"
+date: "2026-07-08"
+role: "Cloud & AI Security Engineer"
 os: "EkonkarOS v1.0.0 (Custom Build)"
 shell: "zsh (secure)"
 editor: "vim"
@@ -9,8 +9,6 @@ location: "Thunder Bay, ON"
 email: "ekonkar.singh.s@gmail.com"
 ---
 
-Enterprise Cloud Identity and Compliance professional supporting Azure and Microsoft 365 platforms in federal government environments.
+Cloud Security and Generative AI safety specialist. Experienced in compliance automation, identity governance (Azure/M365), and Zero Trust architecture aligned with federal security standards (ITSG-33, NIST).
 
-Experience in compliance automation, cross-tenant identity initiatives, and Zero Trust architecture aligned with ITSG-33, NIST, and TBS guardrails.
-
-Currently exploring the intersection of AI safety, cloud security, and distributed systems.
+Researching and building technical auditing frameworks for LLM safety and cognitive threat modeling. Active open-source contributor to security toolkits including nuclei, httpx, and uncover.

@@ -11,6 +11,8 @@ skills:
   - category: "Enterprise Tools"
     items: ["Jira", "Confluence", "Quest On Demand", "ShareGate", "Power BI", "Log Analytics"]
   - category: "ML & Research"
-    items: ["Scikit-Learn", "PyTorch", "Self-Supervised Learning", "Drift Detection"]
+    items: ["Scikit-Learn", "PyTorch", "Self-Supervised Learning", "LLM Security Auditing", "Drift Detection"]
+  - category: "Open Source Security"
+    items: ["nuclei", "httpx", "uncover", "checkov"]
 
 ---

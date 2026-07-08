@@ -6,28 +6,25 @@ startDate: "2025-07-01"
 endDate: "Present"
 schedule: "0 9 * * 1-5"
 status: "running"
-tags: ["Azure", "Microsoft 365", "PowerShell", "Compliance", "Identity"]
+tags: ["C#", "Python", "PowerShell", "OPA", "Azure", "M365"]
 ---
 
 ## Role Overview
 
-Supporting architectural improvements to a multi-tenant Azure identity compliance platform for federal government.
+Supporting architectural improvements and automated compliance guardrails for multi-tenant cloud and Generative AI platforms in the federal government.
 
 ---
 
 ## Key Contributions
 
-- Advised on platform improvements achieving **~70% reduction in script execution time** and **~35% reduction in cloud costs**
-- Implemented PowerShell automation for identity mapping, tenant validation, and compliance reporting
-- Supported scalability planning from 20 tenants toward **200-tenant footprint**
-- Assisted SQL workload migration out of VMs for improved reliability
-- Provided SME input on cross-tenant migrations using Quest On Demand and ShareGate
-- Coordinated with Microsoft for temporary licensing for tool evaluation
-- Advised on Jira workflows and Confluence documentation practices
-- Contributed to Azure tenant security guidance aligned with TBS guardrails and ITSG-33
+- **Generative AI Guardrails:** Designed and implemented automated safety guardrails using Policy-as-Code (OPA/Rego) to enforce Responsible AI compliance across cloud architectures hosting generative AI tools.
+- **Software Engineering:** Developed and optimized RESTful backend services in C# (.NET Core) and Python to automate identity compliance, and designed frontend monitoring dashboards using HTML and CSS.
+- **Testing & Workload Optimization:** Engineered automated unit testing suites (pytest, MSTest) to validate database mapping integrity, achieving a ~70% reduction in script execution times and optimizing SQL workloads.
+- **Technical Documentation:** Authored comprehensive technical data models, REST API specifications, and admin guides to ensure seamless migration and onboarding.
+- **Migration & Operations:** Partnered with cross-functional databases, operations, and procurement teams to guide cross-tenant migrations using Quest On Demand and ShareGate.
 
 ---
 
 ## Tech Stack
 
-`PowerShell` `Azure` `M365` `Jira` `Confluence` `Quest On Demand` `ShareGate`
+`C#` `Python` `PowerShell` `OPA` `Azure` `M365` `Quest On Demand` `ShareGate`

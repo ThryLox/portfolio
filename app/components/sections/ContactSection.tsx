@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Linkedin, Github, Globe, FileDown } from "lucide-react";
+import Link from "next/link";
 
 export const ContactSection = () => {
     const links = [
@@ -59,14 +60,13 @@ export const ContactSection = () => {
                 </div>
 
                 <div className="flex justify-center pt-4 border-t border-border">
-                    <a
-                        href="/resume.pdf"
-                        download="Ekonkar_Singh_Resume.pdf"
+                    <Link
+                        href="/resume"
                         className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/50 px-6 py-3 rounded transition-colors"
                     >
                         <FileDown className="w-5 h-5" />
-                        Download Resume (PDF)
-                    </a>
+                        View / Print Resume
+                    </Link>
                 </div>
             </div>
 

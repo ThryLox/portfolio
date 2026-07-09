@@ -80,14 +80,13 @@ export const Navigation = () => {
                                 <span className="text-accent">$</span> {item.label}
                             </a>
                         ))}
-                        <a
-                            href="/resume.pdf"
-                            download="Ekonkar_Singh_Resume.pdf"
+                        <Link
+                            href="/resume"
                             className="flex items-center gap-1.5 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/50 px-2 py-1 rounded text-xs font-mono transition-colors"
                         >
                             <FileDown className="w-3 h-3" />
                             Resume
-                        </a>
+                        </Link>
                         <span className="text-xs text-muted-foreground font-mono">{time}</span>
                     </div>
 
@@ -115,14 +114,13 @@ export const Navigation = () => {
                                 <span className="text-accent">$</span> {item.label}
                             </a>
                         ))}
-                        <a
-                            href="/resume.pdf"
-                            download="Ekonkar_Singh_Resume.pdf"
+                        <Link
+                            href="/resume"
                             className="flex items-center gap-2 bg-primary/10 text-primary border border-primary/50 px-3 py-2 rounded text-sm font-mono w-fit mt-2"
                         >
                             <FileDown className="w-4 h-4" />
                             Resume
-                        </a>
+                        </Link>
                     </div>
                 </div>
             )}

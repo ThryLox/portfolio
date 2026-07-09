@@ -42,7 +42,7 @@ export async function getPostBySlug(slug: string, type: ContentType): Promise<Po
     };
 }
 
-export function getAllPosts(type: ContentType) {
+export function getAllPosts(type: ContentType): PostData[] {
     const typeDirectory = path.join(contentDirectory, type);
 
     if (!fs.existsSync(typeDirectory)) {

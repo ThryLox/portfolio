@@ -55,14 +55,12 @@ export function Navbar() {
                                 {link.name}
                             </Link>
                         ))}
-                        <a
-                            href="/resume.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                        <Link
+                            href="/resume"
                             className="px-4 py-2 text-sm font-medium text-slate-950 bg-cyan-500 rounded-md hover:bg-cyan-400 transition-colors"
                         >
                             Resume
-                        </a>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -95,15 +93,13 @@ export function Navbar() {
                                     {link.name}
                                 </Link>
                             ))}
-                            <a
-                                href="/resume.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <Link
+                                href="/resume"
                                 className="block w-full text-center px-4 py-2 text-sm font-medium text-slate-950 bg-cyan-500 rounded-md hover:bg-cyan-400 transition-colors"
                                 onClick={() => setIsOpen(false)}
                             >
                                 Resume
-                            </a>
+                            </Link>
                         </div>
                     </motion.div>
                 )}

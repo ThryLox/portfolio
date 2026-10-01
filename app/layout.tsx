@@ -47,10 +47,27 @@ export default async function RootLayout({
     title: post.title as string,
   }));
 
+  // Structured data so search engines tie the site, LinkedIn and GitHub to one person
+  const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: whoAmI.name,
+    url: site.url,
+    jobTitle: whoAmI.role,
+    description: site.description,
+    image: `${site.url}/opengraph-image.png`,
+    address: { "@type": "PostalAddress", addressLocality: "Ottawa", addressRegion: "ON", addressCountry: "CA" },
+    sameAs: [site.linkedin, site.github],
+  };
+
   return (
     <html lang="en" className={`${geist.variable} ${geistMono.variable} scroll-smooth`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: bootScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c") }}
+        />
       </head>
       <body className="min-h-screen bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary overflow-x-hidden">
         <ClientLayout projects={projects} email={whoAmI.email}>{children}</ClientLayout>

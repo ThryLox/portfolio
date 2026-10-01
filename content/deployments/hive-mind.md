@@ -1,12 +1,12 @@
 ---
 title: "HIVEMIND — Swarm Debugger"
 date: "2026-02-15"
-status: "active"
-version: "v1.0.0"
 description: "High-performance visual analytics platform for multi-agent swarm intelligence simulations."
 tags: ["TypeScript", "React", "Vite", "Web Workers", "Physics Engine"]
 link: "https://github.com/ThryLox/hive-mind"
 demo: "https://hive-mind-psi.vercel.app/"
+image: "/projects/hive-mind.png"
+imageAlt: "Screenshot of the HIVEMIND swarm simulation with controls and live metrics"
 ---
 
 # Overview
@@ -20,7 +20,7 @@ demo: "https://hive-mind-psi.vercel.app/"
 Swarm simulations involve thousands of dynamic calculations. HIVEMIND is engineered for high-count agent simulation without sacrificing UI responsiveness:
 
 *   **Non-blocking Simulation:** A dedicated **Web Worker** handles the physics loop, keeping the browser UI thread free for smooth 60fps rendering.
-*   **Spatial Partitioning:** Agents are indexed using a high-density **Spatial Hash Grid**, enabling $O(1)$ real-time proximity queries for flocking parameters, food foraging paths, and collision avoidance.
+*   **Spatial Partitioning:** Agents are indexed using a high-density **Spatial Hash Grid**, enabling O(1) real-time proximity queries for flocking parameters, food foraging paths, and collision avoidance.
 
 ---
 

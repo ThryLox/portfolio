@@ -1,8 +1,6 @@
 ---
 title: "SSH Sentinel"
 date: "2024-10-20"
-status: "active"
-version: "v1.1.0"
 description: "SSH honeypot and attack pattern analysis system on Azure."
 tags: ["Azure", "Power BI", "Security Analytics", "Honeypot"]
 link: ""

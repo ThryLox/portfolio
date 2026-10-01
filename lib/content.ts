@@ -7,7 +7,7 @@ import DOMPurify from 'isomorphic-dompurify';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
-export type ContentType = 'root' | 'logs' | 'deployments' | 'cronjobs';
+export type ContentType = 'root' | 'deployments' | 'cronjobs';
 
 export interface PostData {
     slug: string;

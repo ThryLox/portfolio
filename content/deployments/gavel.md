@@ -1,12 +1,13 @@
 ---
 title: "Project Gavel — AI Compliance Auditor"
 date: "2026-03-01"
-status: "active"
-version: "v1.0.0"
+featured: true
 description: "Automated technical security & regulatory compliance auditing framework for enterprise LLMs."
 tags: ["Python", "Ollama", "OpenAI API", "AI Safety", "Legal Tech"]
 link: "https://github.com/ThryLox/project-gavel"
 demo: ""
+image: "/projects/gavel.svg"
+imageAlt: "Flow from YAML rules to test prompts, target model, isolated judge model and audit report"
 ---
 
 # Overview

@@ -1,12 +1,12 @@
 ---
 title: "Depth Lens"
 date: "2025-10-15"
-status: "active"
-version: "v1.0.0"
 description: "Privacy-first mental health reflection tool based on PDM-2 psychological framework."
 tags: ["Next.js", "TypeScript", "Web Crypto API", "Privacy"]
 link: "https://github.com/ThryLox/depth-lens"
 demo: "https://depth-lens.vercel.app/"
+image: "/projects/depth-lens.png"
+imageAlt: "Screenshot of the Depth Lens landing page"
 ---
 
 # Overview

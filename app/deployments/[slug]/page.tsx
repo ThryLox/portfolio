@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import { getPostBySlug, getAllPosts } from "@/lib/content";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
+
+type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
     const posts = getAllPosts("deployments");
@@ -9,39 +12,42 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function DeploymentPage({ params }: { params: { slug: string } }) {
-    const post = await getPostBySlug(params.slug, "deployments");
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { slug } = await params;
+    const post = await getPostBySlug(slug, "deployments");
+    return {
+        title: post.title,
+        description: post.description,
+        alternates: { canonical: `/deployments/${slug}` },
+    };
+}
+
+export default async function DeploymentPage({ params }: Props) {
+    const { slug } = await params;
+    const post = await getPostBySlug(slug, "deployments");
 
     return (
-        <article className="font-mono max-w-4xl mx-auto py-12">
-            <Link href="/" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors">
+        <article className="max-w-4xl mx-auto py-12">
+            <Link href="/#projects" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors">
                 <ArrowLeft className="w-4 h-4" />
-                <span>cd ..</span>
+                <span>Back to projects</span>
             </Link>
 
-            <div className="border border-border bg-card/50 rounded-lg p-8">
+            <div className="glass rounded-lg p-8">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-6 border-b border-border pb-6 mb-6">
                     <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-primary text-sm">
-                            <span className="text-accent">$</span>
-                            <span>systemctl status {post.slug}.service</span>
-                        </div>
-
-                        <div className="flex items-center gap-3">
-                            <div className={`w-3 h-3 rounded-full ${post.status === 'active' ? 'bg-secondary animate-pulse' : 'bg-muted'}`} />
-                            <h1 className="text-3xl font-bold text-foreground">{post.title}</h1>
-                        </div>
+                        <h1 className="text-3xl font-bold text-foreground">{post.title}</h1>
 
                         <div className="flex flex-wrap gap-2">
                             {post.tags?.map((tag: string) => (
-                                <span key={tag} className="text-xs text-primary/80 bg-primary/10 px-2 py-1 rounded border border-primary/20">
+                                <span key={tag} className="font-mono text-xs text-primary/80 bg-primary/10 px-2 py-1 rounded border border-primary/20">
                                     {tag}
                                 </span>
                             ))}
                         </div>
                     </div>
 
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 shrink-0">
                         {post.link && (
                             <a
                                 href={post.link}
@@ -50,7 +56,7 @@ export default async function DeploymentPage({ params }: { params: { slug: strin
                                 className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/50 px-4 py-2 rounded transition-colors text-sm"
                             >
                                 <Github className="w-4 h-4" />
-                                SOURCE
+                                Source
                             </a>
                         )}
                         {post.demo && (
@@ -61,37 +67,30 @@ export default async function DeploymentPage({ params }: { params: { slug: strin
                                 className="flex items-center gap-2 bg-secondary/10 hover:bg-secondary/20 text-secondary border border-secondary/50 px-4 py-2 rounded transition-colors text-sm"
                             >
                                 <ExternalLink className="w-4 h-4" />
-                                LIVE DEMO
+                                Live demo
                             </a>
                         )}
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <div className="lg:col-span-2 prose prose-invert prose-mono max-w-none">
-                        <div dangerouslySetInnerHTML={{ __html: post.contentHtml || "" }} />
-                    </div>
+                {post.image && (
+                    <figure className="mb-8">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                            src={post.image}
+                            alt={post.imageAlt || `${post.title} overview`}
+                            className="w-full h-auto rounded-lg border border-white/10"
+                        />
+                        {post.imageCaption && (
+                            <figcaption className="font-mono text-xs text-muted-foreground mt-2">{post.imageCaption}</figcaption>
+                        )}
+                    </figure>
+                )}
 
-                    <div className="space-y-6 text-sm">
-                        <div className="bg-black/30 p-4 rounded border border-border">
-                            <h3 className="text-primary font-bold mb-4 border-b border-border pb-2">SERVICE INFO</h3>
-                            <div className="space-y-3">
-                                <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Status:</span>
-                                    <span className="text-foreground uppercase">{post.status}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Version:</span>
-                                    <span className="text-foreground">{post.version}</span>
-                                </div>
-                                <div className="flex justify-between">
-                                    <span className="text-muted-foreground">Deployed:</span>
-                                    <span className="text-foreground">{post.date}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div
+                    className="prose prose-invert prose-mono max-w-none"
+                    dangerouslySetInnerHTML={{ __html: post.contentHtml || "" }}
+                />
             </div>
         </article>
     );

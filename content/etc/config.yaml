@@ -1,18 +1,37 @@
 ---
 skills:
   - category: "Identity & Access"
-    items: ["Microsoft Entra ID", "Conditional Access", "MFA", "Identity Governance", "Cross-Tenant Migrations"]
+    items: ["Microsoft Entra ID", "Conditional Access", "Identity Governance", "RBAC", "Cross-Tenant Migrations"]
   - category: "Security & Compliance"
-    items: ["ITSG-33", "NIST 800-53", "Zero Trust", "CIS Benchmarks", "TBS Guardrails"]
+    items: ["ITSG-33", "NIST 800-53", "Zero Trust", "CIS Benchmarks", "TBS Guardrails", "SAST / DAST"]
   - category: "Automation"
-    items: ["PowerShell", "Python", "Bash", "Go", "Policy-as-Code", "OPA"]
+    items: ["Python", "PowerShell", "C# (.NET)", "Bash", "Go", "Policy-as-Code", "OPA / Rego"]
   - category: "Cloud & Platforms"
-    items: ["Microsoft Azure", "M365", "Windows", "Linux", "SQL", "PostgreSQL"]
+    items: ["Microsoft Azure", "Microsoft 365", "Microsoft Fabric", "MSSQL", "PostgreSQL", "Git / CI/CD"]
   - category: "Enterprise Tools"
-    items: ["Jira", "Confluence", "Quest On Demand", "ShareGate", "Power BI", "Log Analytics"]
-  - category: "ML & Research"
-    items: ["Scikit-Learn", "PyTorch", "Self-Supervised Learning", "LLM Security Auditing", "Drift Detection"]
-  - category: "Open Source Security"
-    items: ["nuclei", "httpx", "uncover", "checkov"]
+    items: ["Jira", "Power BI", "Power Apps", "Power Automate", "Quest On Demand", "ShareGate", "Log Analytics"]
+  - category: "AI Security & Research"
+    items: ["PyRIT", "AI Red Teaming", "PyTorch", "Scikit-Learn", "Self-Supervised Learning", "Drift Detection"]
+  - category: "Security Tooling"
+    items: ["nuclei", "httpx", "checkov", "Kali Linux"]
 
+certifications:
+  - name: "Microsoft Certified: Cybersecurity Architect Expert"
+    code: "SC-100"
+  - name: "Microsoft Certified: Identity and Access Administrator Associate"
+    code: "SC-300"
+  - name: "Microsoft Certified: Fabric Analytics Engineer Associate"
+    code: "DP-600"
+  - name: "CompTIA Security+"
+    code: "Security+"
+  - name: "ITIL v4 Foundation"
+    code: "ITIL 4"
+
+publications:
+  - title: "Contrastive Representation Learning for Network Flow Anomaly Detection Under Distribution Shift"
+    venue: "CCIDSA 2026, Lakehead University"
+    link: "/deployments/ssl-ids-2026"
+  - title: "Manifold-Based Novelty Detection for Network Intrusion: A Contrastive Self-Supervised Approach"
+    venue: ""
+    link: ""
 ---

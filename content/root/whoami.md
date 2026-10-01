@@ -1,14 +1,13 @@
 ---
 title: "System Identity"
-date: "2026-07-08"
-role: "Cloud & AI Security Engineer"
-os: "EkonkarOS v1.0.0 (Custom Build)"
-shell: "zsh (secure)"
-editor: "vim"
-location: "Thunder Bay, ON"
+name: "Ekonkar Singh"
+date: "2026-10-01"
+role: "Cloud & AI Security Analyst"
+headline: "Compliance automation, identity and Zero Trust"
+location: "Ottawa, ON"
 email: "ekonkar.singh.s@gmail.com"
 ---
 
-Cloud Security and Generative AI safety specialist. Experienced in compliance automation, identity governance (Azure/M365), and Zero Trust architecture aligned with federal security standards (ITSG-33, NIST).
+I'm a security analyst working on cloud compliance and identity. Most of my work is turning written security requirements into something that can be checked automatically. I write controls as Policy-as-Code, test them, and build the tooling around them in Python, PowerShell and C#.
 
-Researching and building technical auditing frameworks for LLM safety and cognitive threat modeling. Active open-source contributor to security toolkits including nuclei, httpx, and uncover.
+Outside work I focus on AI security. I contribute to Microsoft PyRIT, an open-source AI red-teaming framework, and presented research on network anomaly detection at CCIDSA 2026.

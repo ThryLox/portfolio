@@ -1,8 +1,6 @@
 ---
 title: "CogSec — Cognitive Threat Modeling"
 date: "2025-11-01"
-status: "active"
-version: "v1.0.0"
 description: "Gemini-powered forensic application that models human cognitive overload as a cybersecurity attack surface."
 tags: ["Gemini API", "AI/ML", "Python", "Security Research"]
 link: "https://github.com/ThryLox/CogSec"

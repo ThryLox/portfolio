@@ -1,30 +1,22 @@
 ---
-title: "Support Analyst — Security & Compliance"
-company: "Shared Services Canada – Solution Design Team (ITBLAS)"
+title: "Support Analyst, ITBLAS"
+company: "Shared Services Canada"
 location: "Thunder Bay, Ontario"
-startDate: "2025-07-01"
+date: "2025-07-01"
+startDate: "Jul 2025"
 endDate: "Present"
-schedule: "0 9 * * 1-5"
 status: "running"
-tags: ["C#", "Python", "PowerShell", "OPA", "Azure", "M365"]
+description: "Compliance automation, identity and migration tooling for Government of Canada cloud tenants."
+tags: ["OPA/Rego", "Python", "C#", "Azure", "MSSQL", "CI/CD", "Jira API"]
 ---
 
-## Role Overview
+## What I do
 
-Supporting architectural improvements and automated compliance guardrails for multi-tenant cloud and Generative AI platforms in the federal government.
-
----
-
-## Key Contributions
-
-- **Generative AI Guardrails:** Designed and implemented automated safety guardrails using Policy-as-Code (OPA/Rego) to enforce Responsible AI compliance across cloud architectures hosting generative AI tools.
-- **Software Engineering:** Developed and optimized RESTful backend services in C# (.NET Core) and Python to automate identity compliance, and designed frontend monitoring dashboards using HTML and CSS.
-- **Testing & Workload Optimization:** Engineered automated unit testing suites (pytest, MSTest) to validate database mapping integrity, achieving a ~70% reduction in script execution times and optimizing SQL workloads.
-- **Technical Documentation:** Authored comprehensive technical data models, REST API specifications, and admin guides to ensure seamless migration and onboarding.
-- **Migration & Operations:** Partnered with cross-functional databases, operations, and procurement teams to guide cross-tenant migrations using Quest On Demand and ShareGate.
-
----
-
-## Tech Stack
-
-`C#` `Python` `PowerShell` `OPA` `Azure` `M365` `Quest On Demand` `ShareGate`
+- **Policy-as-Code (OPA/Rego):** write security controls as policy for a live multi-tenant compliance platform, then run functional testing, troubleshoot failures and document each control.
+- **Python:** built a script that parses the source security standard and cross-checks the policy engine's controls against it one-to-one.
+- **Azure, MSSQL:** directing the move of a legacy local compliance database to an Azure database to reduce its attack surface, and wrote the documentation for the effort.
+- **C#, .NET:** optimized legacy code as part of the same database modernization.
+- **CI/CD, Git:** built pipelines with SAST and DAST scanning to catch vulnerabilities before deployment.
+- **Tenant migrations:** coordinated and tested the migration tooling, including Microsoft's Orchestrator tool while in preview. Prepared test cases, readied tenants, executed migrations and validated results, with heatmap dashboards for transfer status.
+- **Power Apps, Power Automate:** built a ticketing and change-tracking workflow with management reporting, which another team adopted.
+- **Jira, Jira API:** built custom workflows, and now building a portal that creates and searches issues through the API.

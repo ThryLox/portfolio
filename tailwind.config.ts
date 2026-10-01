@@ -9,7 +9,8 @@ const config: Config = {
     theme: {
         extend: {
             fontFamily: {
-                mono: ["JetBrains Mono", "monospace"],
+                sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+                mono: ["var(--font-mono)", "ui-monospace", "monospace"],
             },
             colors: {
                 border: "hsl(var(--border))",

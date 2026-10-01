@@ -1,30 +1,18 @@
 ---
-title: "IT Analyst (Co-op)"
+title: "Co-op Student, Cloud Security and Compliance"
 company: "Shared Services Canada"
 location: "Thunder Bay, Ontario"
-startDate: "2023-07-01"
-endDate: "2024-05-31"
-schedule: "0 9 * * 1-5"
+date: "2023-07-01"
+startDate: "Jul 2023"
+endDate: "May 2024"
 status: "completed"
-tags: ["MFA", "Windows 11", "Identity", "Compliance", "BYOD"]
+description: "Microsoft 365 tenant configuration, Entra ID access workflows and automated baseline compliance monitoring."
+tags: ["Microsoft 365", "Entra ID", "RBAC", "Compliance Monitoring"]
 ---
 
-## Role Overview
+## What I did
 
-Supported MFA onboarding, identity verification, and endpoint configuration in enterprise Windows deployments.
-
----
-
-## Key Contributions
-
-- Supported MFA onboarding and identity verification across enterprise deployments
-- Assisted with endpoint configuration hardening for Windows 11
-- Performed access control and configuration compliance reviews
-- Documented BYOD identity governance and access provisioning workflows
-- Provided technical support for identity-controlled systems
-
----
-
-## Tech Stack
-
-`Windows 11` `MFA` `Identity Governance` `Compliance` `BYOD`
+- **Microsoft 365:** managed and configured tenant environments against baseline configurations and Microsoft implementation standards.
+- **Microsoft Entra ID, RBAC:** built and documented identity and role-based access workflows for administrative boundaries.
+- **Compliance monitoring:** implemented automated checks against M365 baseline configurations and tuned security logging.
+- **Stakeholders:** worked with TBS and CCCS on cloud guardrails, and facilitated weekly M365 Working Group sessions for partner departments.

@@ -1,8 +1,6 @@
 ---
 title: "StockML"
 date: "2024-03-01"
-status: "active"
-version: "v2.0.0"
 description: "Machine learning web app for stock trend prediction."
 tags: ["Python", "Flask", "Scikit-Learn", "Finance"]
 link: "https://github.com/ThryLox/StockML"

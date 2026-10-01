@@ -1,45 +1,40 @@
-"use client";
-
-import { Mail, Linkedin, Github, Globe, FileDown } from "lucide-react";
+import { Mail, Linkedin, Github, FileDown } from "lucide-react";
 import Link from "next/link";
+import { site } from "@/lib/site";
+import { SectionHeading } from "../ui/SectionHeading";
 
-export const ContactSection = () => {
+export const ContactSection = ({ email }: { email: string }) => {
     const links = [
         {
             icon: Mail,
             label: "Email",
-            href: "mailto:ekonkar.singh.s@gmail.com",
-            value: "ekonkar.singh.s@gmail.com",
+            href: `mailto:${email}`,
+            value: email,
         },
         {
             icon: Linkedin,
             label: "LinkedIn",
-            href: "https://linkedin.com/in/esingh-1",
-            value: "linkedin.com/in/esingh-1",
+            href: site.linkedin,
+            value: site.linkedin.replace(/^https:\/\/(www\.)?/, "").replace(/\/$/, ""),
         },
         {
             icon: Github,
             label: "GitHub",
-            href: "https://github.com/ThryLox",
-            value: "github.com/ThryLox",
-        },
-        {
-            icon: Globe,
-            label: "Portfolio",
-            href: "https://ekonkar.systems",
-            value: "ekonkar.systems",
+            href: site.github,
+            value: site.github.replace(/^https:\/\//, ""),
         },
     ];
 
     return (
-        <section id="contact" className="py-12 font-mono">
-            <div className="flex items-center gap-2 mb-6 text-primary">
-                <span className="text-accent">$</span>
-                <h2 className="text-xl font-bold">cat /etc/contact.conf</h2>
-            </div>
+        <section id="contact" className="py-12 scroll-mt-16">
+            <SectionHeading index="06" title="Contact" command="cat /etc/contact.conf" />
 
-            <div className="bg-card/50 border border-border rounded-lg p-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div className="glass hud rounded-lg p-6">
+                <p className="text-sm text-muted-foreground mb-6">
+                    Open to cloud security and AI security roles, remote or hybrid from Ottawa.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                     {links.map((link) => (
                         <a
                             key={link.label}
@@ -48,10 +43,10 @@ export const ContactSection = () => {
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 p-3 rounded border border-border hover:border-primary/50 hover:bg-primary/5 transition-all group"
                         >
-                            <link.icon className="w-5 h-5 text-primary" />
-                            <div>
+                            <link.icon className="w-5 h-5 text-primary shrink-0" />
+                            <div className="min-w-0">
                                 <span className="text-xs text-muted-foreground block">{link.label}</span>
-                                <span className="text-sm text-foreground group-hover:text-primary transition-colors">
+                                <span className="text-sm text-foreground group-hover:text-primary transition-colors break-all">
                                     {link.value}
                                 </span>
                             </div>
@@ -71,8 +66,7 @@ export const ContactSection = () => {
             </div>
 
             <div className="text-center mt-8 text-sm text-muted-foreground">
-                <span className="text-accent">// </span>
-                Built with Next.js • © {new Date().getFullYear()} Ekonkar Singh
+                © {new Date().getFullYear()} Ekonkar Singh
             </div>
         </section>
     );

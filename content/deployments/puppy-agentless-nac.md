@@ -1,8 +1,6 @@
 ---
 title: "PUPPY — Agentless NAC"
 date: "2025-01-01"
-status: "active"
-version: "v1.0.0"
 description: "Network Access Control without endpoint agents for BYOD environments."
 tags: ["Network Security", "RADIUS", "Python", "Slack API"]
 link: ""

@@ -1,5 +1,7 @@
+import Link from "next/link";
+import { FileDown, Github, Linkedin, MapPin } from "lucide-react";
 import { PostData } from "@/lib/content";
-import { TypewriterText } from "../ui/TypewriterText";
+import { site } from "@/lib/site";
 
 interface WhoAmIProps {
     data: PostData;
@@ -7,69 +9,69 @@ interface WhoAmIProps {
 
 export const WhoAmI = ({ data }: WhoAmIProps) => {
     return (
-        <section id="whoami" className="py-12 font-mono">
-            <div className="flex items-center gap-2 mb-6 text-primary">
-                <span className="text-accent">$</span>
-                <h2 className="text-xl font-bold">
-                    <TypewriterText text="whoami" delay={2000} />
-                </h2>
-            </div>
+        <section id="about" className="relative isolate pt-10 pb-6 scroll-mt-16">
+            <div aria-hidden="true" className="hero-glow" />
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-card/50 border border-border p-6 rounded-lg relative overflow-hidden group">
-                {/* Decorative background element */}
-                <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
-                    <pre className="text-[0.6rem] leading-[0.6rem] text-primary">
-                        {`
-   .d8888b.  
-  d88P  Y88b 
-  888    888 
-  888    888 
-  888    888 
-  888    888 
-  Y88b  d88P 
-   "Y8888P"  
-`}
-                    </pre>
+            {/* Terminal window */}
+            <div className="gradient-border rounded-xl overflow-hidden">
+                <div aria-hidden="true" className="relative flex items-center px-4 py-3 border-b border-white/10 bg-black/40">
+                    <div className="flex gap-2">
+                        <span className="w-3 h-3 rounded-full bg-white/15" />
+                        <span className="w-3 h-3 rounded-full bg-white/15" />
+                        <span className="w-3 h-3 rounded-full bg-white/15" />
+                    </div>
+                    <span className="absolute inset-x-0 text-center font-mono text-xs text-muted-foreground pointer-events-none">
+                        ekonkar@systems: ~
+                    </span>
                 </div>
 
-                <div className="space-y-4 text-sm">
-                    <div className="flex gap-4">
-                        <span className="text-primary min-w-[100px]">user:</span>
-                        <span className="text-foreground">
-                            <TypewriterText text="ekonkar" delay={2500} cursor={false} />
-                        </span>
-                    </div>
-                    <div className="flex gap-4">
-                        <span className="text-primary min-w-[100px]">role:</span>
-                        <span className="text-foreground">
-                            <TypewriterText text={data.role} delay={2800} cursor={false} />
-                        </span>
-                    </div>
-                    <div className="flex gap-4">
-                        <span className="text-primary min-w-[100px]">os:</span>
-                        <span className="text-foreground">
-                            <TypewriterText text={data.os} delay={3100} cursor={false} />
-                        </span>
-                    </div>
-                    <div className="flex gap-4">
-                        <span className="text-primary min-w-[100px]">shell:</span>
-                        <span className="text-foreground">
-                            <TypewriterText text={data.shell} delay={3400} cursor={false} />
-                        </span>
-                    </div>
-                    <div className="flex gap-4">
-                        <span className="text-primary min-w-[100px]">location:</span>
-                        <span className="text-foreground">
-                            <TypewriterText text={data.location} delay={3700} cursor={false} />
-                        </span>
-                    </div>
-                </div>
+                <div className="p-6 sm:p-10">
+                    <p aria-hidden="true" className="font-mono text-sm text-muted-foreground mb-5">
+                        <span className="text-primary">$</span> whoami
+                    </p>
 
-                <div className="text-muted-foreground text-sm leading-relaxed border-t md:border-t-0 md:border-l border-border pt-6 md:pt-0 md:pl-6">
-                    <div dangerouslySetInnerHTML={{ __html: data.contentHtml || "" }} />
+                    <h1 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight">{data.name}</h1>
+                    <p className="font-mono text-xl sm:text-2xl text-primary mt-3">{data.role}</p>
+                    <p className="text-base text-muted-foreground mt-1">{data.headline}</p>
+
+                    <div
+                        className="max-w-3xl mt-6 space-y-4 text-base leading-relaxed text-foreground/80"
+                        dangerouslySetInnerHTML={{ __html: data.contentHtml || "" }}
+                    />
+
+                    <div className="flex flex-wrap items-center gap-3 mt-8 font-mono text-sm">
+                        <Link
+                            href="/resume"
+                            className="flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2 rounded transition-colors"
+                        >
+                            <FileDown className="w-4 h-4" />
+                            Resume
+                        </Link>
+                        <a
+                            href={site.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 border border-white/10 hover:border-primary/50 hover:text-primary px-4 py-2 rounded transition-colors"
+                        >
+                            <Github className="w-4 h-4" />
+                            GitHub
+                        </a>
+                        <a
+                            href={site.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 border border-white/10 hover:border-primary/50 hover:text-primary px-4 py-2 rounded transition-colors"
+                        >
+                            <Linkedin className="w-4 h-4" />
+                            LinkedIn
+                        </a>
+                        <span className="flex items-center gap-1.5 text-muted-foreground sm:ml-2">
+                            <MapPin className="w-4 h-4" />
+                            {data.location}
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
     );
 };
-

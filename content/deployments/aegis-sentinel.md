@@ -1,12 +1,13 @@
 ---
 title: "Aegis Sentinel — Agentic Security Auditor"
 date: "2026-04-01"
-status: "active"
-version: "v1.0.0"
+featured: true
 description: "Autonomous cloud security auditor with zero-trust permission boundaries for AI agents."
 tags: ["JavaScript", "TypeScript", "Auth0", "AI Agents", "Cloud Security"]
 link: "https://github.com/ThryLox/aegis-sentinel"
 demo: ""
+image: "/projects/aegis-sentinel.svg"
+imageAlt: "Flow from LLM agent through guardrails and Token Vault to cloud APIs and findings"
 ---
 
 # Overview

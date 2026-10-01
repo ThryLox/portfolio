@@ -1,8 +1,6 @@
 ---
 title: "Driftlite — AI Behavior Monitoring"
 date: "2025-07-01"
-status: "active"
-version: "v1.0.0"
 description: "Lightweight monitoring of AI system drift using interpretable statistical signals."
 tags: ["Machine Learning", "Python", "AI Safety", "Research"]
 link: "https://github.com/ThryLox/drift-research"

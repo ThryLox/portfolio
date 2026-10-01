@@ -1,8 +1,6 @@
 ---
 title: "Sentinel Agent"
 date: "2024-11-15"
-status: "active"
-version: "v1.0.0"
 description: "Lightweight Windows endpoint monitoring agent built in Go."
 tags: ["Go", "Windows", "Security", "SQLite"]
 link: "https://github.com/ThryLox/sentinel-agent"

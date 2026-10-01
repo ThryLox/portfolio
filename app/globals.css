@@ -599,3 +599,13 @@ kbd {
 .hud:hover {
   border-color: hsl(180 45% 45% / 0.35);
 }
+
+.prose a {
+  color: hsl(180 45% 62%);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: hsl(180 45% 75%);
+}

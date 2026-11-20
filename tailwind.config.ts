@@ -38,6 +38,8 @@ const config: Config = {
                     DEFAULT: "hsl(var(--accent))",
                     foreground: "hsl(var(--accent-foreground))",
                 },
+                // Warm highlight, used only for status and results (running role, featured, merged)
+                warm: "hsl(var(--warm))",
                 popover: {
                     DEFAULT: "hsl(var(--popover))",
                     foreground: "hsl(var(--popover-foreground))",

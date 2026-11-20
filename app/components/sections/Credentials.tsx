@@ -20,14 +20,15 @@ export const Certifications = ({ certifications }: { certifications: Certificati
         <section id="certifications" className="py-12 scroll-mt-16">
             <SectionHeading index="01" title="Certifications" command="ls /etc/certs" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
                 {certifications.map((cert) => (
-                    <div key={cert.code} className="glass hud p-4 rounded-lg">
-                        <div className="flex items-center gap-2">
-                            <Award className="w-4 h-4 text-primary shrink-0" />
-                            <span className="font-mono font-bold text-foreground text-glow">{cert.code}</span>
-                        </div>
-                        <div className="text-xs text-muted-foreground mt-2">{cert.name}</div>
+                    <div
+                        key={cert.code}
+                        className="group glass hud flex flex-col rounded-lg p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50"
+                    >
+                        <Award className="w-5 h-5 text-primary/70 transition-colors group-hover:text-primary" aria-hidden="true" />
+                        <span className="mt-4 font-mono text-2xl font-bold leading-tight text-foreground text-glow">{cert.code}</span>
+                        <span className="mt-2 text-xs leading-snug text-muted-foreground">{cert.name}</span>
                     </div>
                 ))}
             </div>
@@ -40,7 +41,7 @@ export const Publications = ({ publications }: { publications: Publication[] }) 
 
     return (
         <section id="publications" className="py-12 scroll-mt-16">
-            <SectionHeading index="04" title="Publications" command="ls ~/papers" />
+            <SectionHeading index="05" title="Publications" command="ls ~/papers" />
 
             <ul className="space-y-4">
                 {publications.map((pub) => (

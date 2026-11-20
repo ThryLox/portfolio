@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="160 36 160 140" preserveAspectRatio="xMidYMid meet" role="img">
+  <g fill="none" stroke="#3fa6a6" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M176 104 C196 80 216 80 236 104 S276 128 304 104"/>
+    <path d="M236 104 S276 112 304 66" stroke="#f5b84a" stroke-dasharray="2 9"/>
+    <path d="M176 66 H304" opacity=".3" stroke-dasharray="6 8"/>
+  </g>
+</svg>

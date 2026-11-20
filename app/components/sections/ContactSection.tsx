@@ -27,7 +27,7 @@ export const ContactSection = ({ email }: { email: string }) => {
 
     return (
         <section id="contact" className="py-12 scroll-mt-16">
-            <SectionHeading index="06" title="Contact" command="cat /etc/contact.conf" />
+            <SectionHeading index="07" title="Contact" command="cat /etc/contact.conf" />
 
             <div className="glass hud rounded-lg p-6">
                 <p className="text-sm text-muted-foreground mb-6">

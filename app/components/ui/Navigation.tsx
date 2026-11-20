@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X, Terminal, FileDown, Search } from "lucide-react";
 import { OPEN_PALETTE_EVENT } from "./CommandPalette";
@@ -10,12 +10,32 @@ const navItems = [
     { label: "Certifications", href: "/#certifications" },
     { label: "Experience", href: "/#experience" },
     { label: "Projects", href: "/#projects" },
+    { label: "Open Source", href: "/#opensource" },
     { label: "Skills", href: "/#skills" },
     { label: "Contact", href: "/#contact" },
 ];
 
 export const Navigation = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [active, setActive] = useState("");
+
+    // Scroll-spy: highlight the section currently crossing the upper part of the viewport
+    useEffect(() => {
+        const ids = navItems.map((i) => i.href.replace("/#", ""));
+        const sections = ids.map((id) => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+        if (!sections.length) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) setActive(e.target.id);
+                });
+            },
+            { rootMargin: "-30% 0px -60% 0px" }
+        );
+        sections.forEach((s) => observer.observe(s));
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-border">
@@ -32,7 +52,11 @@ export const Navigation = () => {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="text-xs font-mono text-muted-foreground hover:text-primary transition-colors"
+                                aria-current={active === item.href.replace("/#", "") ? "location" : undefined}
+                                className={`text-xs font-mono transition-colors ${active === item.href.replace("/#", "")
+                                    ? "text-primary border-b border-primary"
+                                    : "text-muted-foreground hover:text-primary"
+                                    }`}
                             >
                                 {item.label}
                             </Link>

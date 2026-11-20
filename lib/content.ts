@@ -80,6 +80,33 @@ export function getAllPosts(type: ContentType): PostData[] {
     });
 }
 
+export interface MergedPR {
+    repo: string;
+    number: string;
+    url: string;
+    title: string;
+}
+
+// Reads the "Merged pull requests" list from the open-source write-up so the home page never drifts from it
+export function getMergedPRs(): MergedPR[] {
+    const fullPath = path.join(contentDirectory, 'deployments', 'open-source-contributions.md');
+    if (!fs.existsSync(fullPath)) return [];
+
+    const { content } = matter(fs.readFileSync(fullPath, 'utf8'));
+    const re = /^- \*\*\[([^\s\]]+) #(\d+)\]\(([^)]+)\):\*\* (.+)$/gm;
+    const prs: MergedPR[] = [];
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(content))) {
+        prs.push({
+            repo: m[1],
+            number: m[2],
+            url: m[3],
+            title: m[4].split(/\.\s/)[0].replace(/\.$/, '').replace(/`/g, ''),
+        });
+    }
+    return prs;
+}
+
 export function getConfig() {
     const fullPath = path.join(contentDirectory, 'etc', 'config.yaml');
 

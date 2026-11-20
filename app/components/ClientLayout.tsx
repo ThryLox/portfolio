@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { BootLoader } from "./ui/BootLoader";
-import { MatrixRain } from "./ui/MatrixRain";
+import { AuroraBackground } from "./ui/AuroraBackground";
 import { Navigation } from "./ui/Navigation";
 import { ScrollProgress } from "./ui/ScrollProgress";
 import { BackToTop } from "./ui/BackToTop";
@@ -18,6 +19,7 @@ interface ClientLayoutProps {
 
 export default function ClientLayout({ children, projects, email }: ClientLayoutProps) {
     const [booted, setBooted] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         if (document.documentElement.classList.contains("booted")) setBooted(true);
@@ -31,13 +33,16 @@ export default function ClientLayout({ children, projects, email }: ClientLayout
         setBooted(true);
     };
 
+    // The link card is a standalone page: no boot overlay, nav, or background effects.
+    if (pathname === "/card") return <>{children}<Analytics /></>;
+
     return (
         <>
             {!booted && <BootLoader onComplete={finishBoot} />}
             <div className="print:hidden">
                 <Navigation />
                 <ScrollProgress />
-                <MatrixRain />
+                <AuroraBackground />
                 <BackToTop />
                 <CommandPalette projects={projects} email={email} />
                 <div className="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.05),rgba(255,255,255,0))]"></div>

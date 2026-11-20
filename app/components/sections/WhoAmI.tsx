@@ -2,12 +2,17 @@ import Link from "next/link";
 import { FileDown, Github, Linkedin, MapPin } from "lucide-react";
 import { PostData } from "@/lib/content";
 import { site } from "@/lib/site";
+import { StatStrip, Stat } from "../ui/StatStrip";
+import { TypedCommand } from "../ui/TypedCommand";
+import { HeroTerminal, TerminalData } from "../ui/HeroTerminal";
 
 interface WhoAmIProps {
     data: PostData;
+    stats: Stat[];
+    terminal: TerminalData;
 }
 
-export const WhoAmI = ({ data }: WhoAmIProps) => {
+export const WhoAmI = ({ data, stats, terminal }: WhoAmIProps) => {
     return (
         <section id="about" className="relative isolate pt-10 pb-6 scroll-mt-16">
             <div aria-hidden="true" className="hero-glow" />
@@ -27,17 +32,21 @@ export const WhoAmI = ({ data }: WhoAmIProps) => {
 
                 <div className="p-6 sm:p-10">
                     <p aria-hidden="true" className="font-mono text-sm text-muted-foreground mb-5">
-                        <span className="text-primary">$</span> whoami
+                        <span className="text-primary">$</span> <TypedCommand text="whoami" />
                     </p>
 
-                    <h1 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight">{data.name}</h1>
-                    <p className="font-mono text-xl sm:text-2xl text-primary mt-3">{data.role}</p>
-                    <p className="text-base text-muted-foreground mt-1">{data.headline}</p>
+                    <h1 className="text-5xl sm:text-6xl font-bold text-foreground tracking-tight">{data.name}</h1>
+                    <p className="font-mono text-lg sm:text-xl text-primary mt-3">{data.role}</p>
+                    <p className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground/90 mt-6 max-w-3xl leading-snug">
+                        I turn security requirements into code that checks itself.
+                    </p>
 
                     <div
-                        className="max-w-3xl mt-6 space-y-4 text-base leading-relaxed text-foreground/80"
+                        className="max-w-3xl mt-6 space-y-4 text-base leading-relaxed text-muted-foreground"
                         dangerouslySetInnerHTML={{ __html: data.contentHtml || "" }}
                     />
+
+                    <StatStrip stats={stats} />
 
                     <div className="flex flex-wrap items-center gap-3 mt-8 font-mono text-sm">
                         <Link
@@ -70,6 +79,8 @@ export const WhoAmI = ({ data }: WhoAmIProps) => {
                             {data.location}
                         </span>
                     </div>
+
+                    <HeroTerminal data={terminal} />
                 </div>
             </div>
         </section>

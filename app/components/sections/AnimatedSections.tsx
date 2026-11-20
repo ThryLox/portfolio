@@ -9,7 +9,7 @@ interface AnimatedSectionsProps {
 
 export const AnimatedSections = ({ children }: AnimatedSectionsProps) => {
     return (
-        <div className="space-y-8 pb-20">
+        <div className="space-y-12 pb-24">
             {children.map((child, index) => (
                 <FadeInSection key={index} delay={index * 50}>
                     {child}

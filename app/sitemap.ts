@@ -11,5 +11,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${site.url}/cronjobs/${post.slug}`,
     }));
 
-    return [{ url: site.url }, { url: `${site.url}/resume` }, ...projects, ...roles];
+    return [{ url: site.url }, { url: `${site.url}/resume` }, { url: `${site.url}/card` },...projects, ...roles];
 }
